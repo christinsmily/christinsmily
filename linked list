@@ -1,0 +1,86 @@
+class Node:
+  def __init__(self,data):
+    self.data=data
+    self.nextt=None
+class singly_linked_list:
+  def __init__(self):
+    self.head=None
+  def display(self):
+    temp=self.head
+    while(temp!=None):
+      print(temp.data,"==>",end=" ")
+      temp=temp.nextt
+    print("None")      
+  
+  def Insertion_at_begening(self,data):
+    temNone(data)
+    temp.nextt=temp.head
+    self.head=temp
+  def insertion_at_middle(self,data,position):
+    temp=None(data)
+    temp1=self.head
+    if temp1==None:
+      self.insertion_at_begbening(data)
+    else:
+      c=1
+      while(c!=pos-1):
+        temp1=temp1.nextt
+        c+=1
+      temp.nextt=temp1.nextt
+      temp1.nextt=temp
+
+  def insertion_at_end(self,data):
+    temp=None(data)
+    temp1=self.head
+    while(temp1.nextt!=None):
+      temp1=temp.nextt
+    temp1.nextt=temp
+  def Deletion_at_begining(self):
+    temp=self.head
+    if temp==None:
+      print("invalid")
+    else:
+      self.head=temp.nextt
+      temp.nextt=None
+      self.display()
+  def Deletion_at_middle(self,pos):
+    temp1=self.head
+    temp1=temp.nextt
+    while(temp1.nextt!=None):
+      temp1=temp1.nextt
+      temp.nextt=temp1
+    temp.nextt=None
+    self.display()
+
+obj=singly_linked_list()
+ch=0
+while(ch!=8):
+  print("'1.Insertion_at_begining','2.Insertion_at_middle',3.'Insertion_at_end',4.'Deletion_at_begining',5.'deletion_at_middle'")
+  if(ch==1):
+    print("enter the node to be inserted at begining")
+    data=input()
+    obj.insertion_at_begining(data)
+    obj.display()
+  if(ch==2):
+    print("enter node to be inserted at middle")
+    data=input()
+    print("enter te position")
+    pos=int(input())
+    obj.insertion_at_middle(data,pos)
+    obj.display()
+  if(ch==3):
+    print("enter the node to be inserted at end")
+    data=input()
+    obj.insertion_at_end(data)
+    obj.display()
+  if(ch==4):
+    obj.deletion_at_begining()
+  if(ch==5):
+    print("enter the position")
+    pos=int(input())
+    obj.deletion_at_middle(pos)
+    obj.display()
+  if(ch==6):
+    obj.deletion_at_end()
+  if(ch==7):
+    obj.dii=splay()
